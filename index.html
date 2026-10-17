@@ -88,4 +88,126 @@ footer p{margin:0 0 6px}
 
 <header class="top">
   <div class="wrap">
-    <strong>侯雨
+    <strong>侯雨佳</strong>
+    <nav aria-label="页面导航">
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#education">教育</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+      <svg viewBox="0 0 320 320" role="img" aria-label="卫星天空图,三颗卫星分别对应三个项目,点击可跳转">
+        <circle class="ring" cx="160" cy="160" r="140"/>
+        <circle class="ring" cx="160" cy="160" r="93"/>
+        <circle class="ring" cx="160" cy="160" r="47"/>
+        <line class="axis" x1="160" y1="20" x2="160" y2="300"/>
+        <line class="axis" x1="20" y1="160" x2="300" y2="160"/>
+        <text class="dir" x="160" y="14">北</text>
+        <text class="dir" x="160" y="316">南</text>
+        <text class="dir" x="8" y="165">西</text>
+        <text class="dir" x="312" y="165">东</text>
+        <g class="sat minor"><circle cx="82" cy="96" r="4"/></g>
+         <g class="sat minor"><circle cx="236" cy="236" r="4"/></g>
+        <g class="sat minor"><circle cx="120" cy="248" r="4"/></g>
+
+        <a href="#p-gnss" aria-label="跳转到 GNSS 上位机项目">
+          <g class="sat"><circle cx="212" cy="92" r="9"/><text x="226" y="97">GNSS</text></g>
+        </a>
+        <a href="#p-led" aria-label="跳转到嵌入式 LED 控制项目">
+          <g class="sat"><circle cx="106" cy="170" r="9"/><text x="120" y="190">龙芯</text></g>
+        </a>
+        <a href="#p-pcb" aria-label="跳转到 PCB 设计项目">
+          <g class="sat"><circle cx="196" cy="196" r="9"/><text x="210" y="215">PCB</text></g>
+        </a>
+      </svg>
+      <figcaption class="note">天空图:每颗亮点对应一个项目</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>项目</h2>
+
+    <article class="proj" id="p-gnss">
+      <div>
+        <h3>GNSS 导航监测上位机</h3>
+        <p class="tech">Python、串口通信、NMEA 解析、高德地图 API、数据可视化</p>
+      </div>
+      <ul>
+        <li>用 Python 和 Tkinter 开发上位机,通过串口接收定位板卡数据,解析 GGA、RMC、GSA、GSV 语句,实时采集与处理。</li>
+        <li>调用高德地图 API,实现轨迹可视化、地理编码、路径规划和距离测算,集成位置服务功能。</li>
+        <li>绘制速度与 HDOP 曲线、卫星天空图和信噪比图;对卫星数不足、HDOP 过高、速度异常、位置突跳做阈值告警。</li>
+        <li>支持导出 Excel 和 KML 轨迹。</li>
+        <li><a href="https://github.com/aodk12/gnss-terminal" target="_blank" rel="noopener">查看源码</a></li>
+      </ul>
+    </article>
+
+    <article class="proj" id="p-led">
+      <div>
+        <h3>嵌入式 LED 控制系统</h3>
+        <p class="tech">C 语言、GPIO、定时器中断、龙芯 1C102</p>
+      </div>
+      <ul>
+        <li>基于龙芯 1C102 开发板,完成矩阵键盘与 LED 控制系统的设计。</li>
+        <li>采用 GPIO 行列扫描方式识别按键,用定时器中断实现 LED 周期控制。</li>
+        <li>完成程序调试、硬件连接与功能验证。</li>
+      </ul>
+    </article>
+
+    <article class="proj" id="p-pcb">
+      <div>
+        <h3>PCB 设计与硬件调试</h3>
+        <p class="tech">嘉立创 EDA、PCB 布局、电路调试</p>
+      </div>
+      <ul>
+        <li>使用嘉立创 EDA 完成电路原理图绘制、元件封装设计和 PCB 布局设计。</li>
+        <li>具备基础电子元件识别、电路焊接和硬件调试能力。</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>技能</h2>
+    <dl class="skills">
+      <dt>编程与工具</dt>
+      <dd>Python、C 语言、MATLAB、VS Code、Git 与 GitHub、嘉立创 EDA</dd>
+      <dt>专业方向</dt>
+      <dd>卫星导航原理、GNSS 接收机原理、室内定位技术、信号与系统</dd>
+      <dt>AI 辅助开发</dt>
+      <dd>使用 ChatGPT、DeepSeek、Claude、Kimi 辅助代码调试、技术资料分析,提高开发效率。</dd>
+      <dt>证书</dt>
+      <dd>普通话二级乙等、C1 驾驶证</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>教育</h2>
+    <div class="edu">
+      <div class="when">2024.09 至 2028.06</div>
+      <div>
+        <p><strong>北华航天工业学院</strong>,导航工程专业,本科</p>
+        <p>主修课程:卫星导航原理、信号与系统、室内定位技术、GNSS 接收机原理、机器学习与人工智能、嵌入式开发、数据库、数据结构</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <p>邮箱:<a href="mailto:1096929553@qq.com">1096929553@qq.com</a></p>
+    <p>GitHub:<a href="https://github.com/aodk12" target="_blank" rel="noopener">github.com/aodk12</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
